@@ -66,10 +66,8 @@ const questions = [
 
 const AvatarDrawing = () => (
   <svg viewBox="0 0 220 230" width="200" height="210" style={{ margin: "0 auto", display: "block" }}>
-    {/* Monitor */}
     <rect x="30" y="130" width="160" height="95" rx="8" fill="#1e293b" stroke="#f59e0b" strokeWidth="2" />
     <rect x="40" y="140" width="140" height="72" rx="4" fill="#0f172a" />
-    {/* Screen content - betting dashboard */}
     <text x="55" y="158" fill="#f59e0b" fontSize="9" fontFamily="monospace" fontWeight="bold">🎰 LIVE BETS</text>
     <rect x="44" y="162" width="60" height="6" rx="2" fill="#16a34a" />
     <rect x="44" y="171" width="40" height="6" rx="2" fill="#dc2626" />
@@ -78,29 +76,20 @@ const AvatarDrawing = () => (
     <text x="112" y="183" fill="#f59e0b" fontSize="9" fontFamily="monospace">ODDS</text>
     <rect x="80" y="220" width="60" height="8" rx="2" fill="#334155" />
     <rect x="60" y="228" width="100" height="5" rx="2" fill="#475569" />
-    {/* Person */}
     <circle cx="110" cy="52" r="28" fill="#fbbf24" stroke="#f59e0b" strokeWidth="2" />
-    {/* Hair */}
     <ellipse cx="110" cy="30" rx="26" ry="13" fill="#292524" />
-    {/* Eyes */}
     <circle cx="100" cy="52" r="4" fill="#1c1917" />
     <circle cx="120" cy="52" r="4" fill="#1c1917" />
     <circle cx="101.5" cy="50.5" r="1.5" fill="white" />
     <circle cx="121.5" cy="50.5" r="1.5" fill="white" />
-    {/* Smile */}
     <path d="M 98 63 Q 110 72 122 63" stroke="#1c1917" strokeWidth="2" fill="none" strokeLinecap="round" />
-    {/* Body - suit */}
     <rect x="80" y="79" width="60" height="55" rx="10" fill="#1e3a5f" />
-    {/* Tie */}
     <polygon points="110,82 115,82 113,110 107,110" fill="#f59e0b" />
-    {/* Arms */}
     <rect x="48" y="82" width="35" height="14" rx="7" fill="#1e3a5f" transform="rotate(-15,65,89)" />
     <rect x="137" y="82" width="35" height="14" rx="7" fill="#1e3a5f" transform="rotate(15,155,89)" />
-    {/* Cap with ING */}
     <ellipse cx="110" cy="27" rx="30" ry="5" fill="#0c4a6e" />
     <rect x="92" y="14" width="36" height="14" rx="4" fill="#0c4a6e" />
     <text x="100" y="25" fill="#f59e0b" fontSize="9" fontWeight="bold">ING</text>
-    {/* Dice decoration */}
     <rect x="158" y="100" width="18" height="18" rx="3" fill="#7c3aed" stroke="#a78bfa" strokeWidth="1" />
     <circle cx="162" cy="104" r="1.5" fill="white" />
     <circle cx="170" cy="104" r="1.5" fill="white" />
@@ -129,7 +118,6 @@ export default function App() {
       color: "#e2e8f0",
       padding: "0 0 60px 0",
     }}>
-      {/* Header */}
       <header style={{
         background: "rgba(99,102,241,0.15)",
         borderBottom: "1px solid rgba(99,102,241,0.4)",
@@ -156,8 +144,6 @@ export default function App() {
         <p style={{ margin: 0, fontSize: 13, color: "#94a3b8" }}>
           Alex Sander Lopez Orcko &nbsp;·&nbsp; 23/06/2026
         </p>
-
-        {/* Progress bar */}
         <div style={{ marginTop: 14, maxWidth: 340, margin: "14px auto 0" }}>
           <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "#94a3b8", marginBottom: 5 }}>
             <span>Progreso</span>
@@ -175,7 +161,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* Questions */}
       <main style={{ maxWidth: 680, margin: "0 auto", padding: "28px 16px 0" }}>
         {questions.map((q, i) => {
           const isOpen = open === q.id;
@@ -198,7 +183,6 @@ export default function App() {
                 overflow: "hidden",
               }}
             >
-              {/* Question row */}
               <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "16px 18px" }}>
                 <span style={{
                   fontSize: 22,
@@ -222,7 +206,6 @@ export default function App() {
                 }}>▾</span>
               </div>
 
-              {/* Answer */}
               {isOpen && (
                 <div style={{
                   borderTop: "1px solid rgba(99,102,241,0.25)",
@@ -258,7 +241,6 @@ export default function App() {
           );
         })}
 
-        {/* Completion message */}
         {visited.size === questions.length && (
           <div style={{
             marginTop: 24,
